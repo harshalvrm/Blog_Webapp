@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Blog App</title>
+		<link rel="stylesheet" type="text/css" href="./style.css" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/daisyui@2.51.6/dist/full.css"
+			rel="stylesheet"
+			type="text/css"
+		/>
+		<script src="https://cdn.tailwindcss.com"></script>
+	</head>
+	<body>
+		<header class="bg-[#C07F00]">
+			<img src="" alt="" class="text-left">
+			<h1 class=" text-center font-bold text-3xl cursor-pointer text-[#000]">MyBlog App</h1>
+		</header>
+
+		<main class="flex flex-col gap-2 my-10 bg-[#FFF7D4] text-[#000]">
+			<section id="add-post" class="flex flex-col gap-5 items-center mb-10">
+				<h2 class="text-2xl font-semibold">Add a New Post</h2>
+				<h2 class="text-xl font-light">(Find new posts at the bottom)</h2>
+				<form class="flex w-full flex-col items-center justify-center gap-5 p-7 rounded-xl border-2 border-[#202020]" id="add-post-form">
+					<input class="input input-bordered text-xl" type="text" id="title-input" placeholder="Title" required/>
+					<textarea class="textarea textarea-bordered text-lg h-64" id="content-input" required></textarea>
+					<button	class="btn border-[2.5px] text-lg text-[#4C3D3D] hover:text-[#FFF7D4]" type="submit">
+						Post
+					</button>
+				</form>
+
+			</section>
+
+			<hr />
+
+			<section id="blog-posts" class="flex flex-col gap-10 items-center">
+				<h2 class="text-3xl font-semibold mb-5">Blog Posts</h2>
+				<ul
+					id="posts-list"
+					class="flex flex-col items-center justify-center gap-5 p-7"
+				></ul>
+			</section>
+		</main>
+
+		<script src="./script.js"></script>
+	</body>
+</html>
